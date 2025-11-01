@@ -5,6 +5,9 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+// 允许动态参数：即使路由不在 generateStaticParams() 中，也允许动态渲染
+export const dynamicParams = true;
+
 // 生成静态路径
 export async function generateStaticParams() {
   return allTools.map((tool) => ({
@@ -13,13 +16,12 @@ export async function generateStaticParams() {
 }
 
 // 生成动态metadata（SEO关键）
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const tool = getToolById(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const tool = getToolById(id);
 
   if (!tool) {
-    return {
-      title: "Tool Not Found",
-    };
+    notFound();
   }
 
   return {
@@ -40,8 +42,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function ToolDetailPage({ params }: { params: { id: string } }) {
-  const tool = getToolById(params.id);
+export default async function ToolDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const tool = getToolById(id);
   
   if (!tool) {
     notFound();
