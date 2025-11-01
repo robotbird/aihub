@@ -4,6 +4,15 @@ import { aiToolsData } from "@/data/ai-tools";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
+// 辅助函数：安全地获取域名
+function getHostname(url: string): string {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url.replace(/^https?:\/\//, "").split('/')[0];
+  }
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#e8e6e1]">
@@ -45,9 +54,13 @@ export default function Home() {
                       className="flex-shrink-0 w-[18px] h-[18px] md:w-[20px] md:h-[20px] rounded-full overflow-hidden bg-white border border-gray-200 hover:border-gray-400 transition-all hover:scale-110 flex items-center justify-center"
                     >
                       <img
-                        src={`https://www.google.com/s2/favicons?domain=${new URL(tool.url).hostname}&sz=128`}
+                        src={`https://www.google.com/s2/favicons?domain=${getHostname(tool.url)}&sz=128`}
                         alt={tool.name}
                         className="w-full h-full object-contain p-[2px]"
+                        onError={(e) => {
+                          // 如果 favicon 加载失败，隐藏图片
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
                       />
                     </Link>
 
