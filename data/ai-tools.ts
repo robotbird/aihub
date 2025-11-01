@@ -135,7 +135,7 @@ export const aiToolsData: Category[] = [
         description: "AI coding assistant that helps write, explain, and debug code.",
       },
       {
-        id: "codig a",
+        id: "codiga",
         name: "Codiga",
         url: "https://www.codiga.io",
         description: "Real-time static code analysis with AI-powered code review.",

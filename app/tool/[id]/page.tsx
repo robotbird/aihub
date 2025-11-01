@@ -16,9 +16,8 @@ export async function generateStaticParams() {
 }
 
 // 生成动态metadata（SEO关键）
-export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
-  const { id } = await params;
-  const tool = getToolById(id);
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const tool = getToolById(params.id);
 
   if (!tool) {
     notFound();
@@ -42,9 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   };
 }
 
-export default async function ToolDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  const tool = getToolById(id);
+export default function ToolDetailPage({ params }: { params: { id: string } }) {
+  const tool = getToolById(params.id);
   
   if (!tool) {
     notFound();
