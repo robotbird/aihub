@@ -6,22 +6,24 @@ import { ExternalLink } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#e8e6e1] overflow-hidden">
-      {/* Header */}
-      <header className="pt-12 md:pt-16 pb-8 md:pb-12 px-4 md:px-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight">
-          <span className="text-[#d97642]">AI</span>{" "}
-          <span className="text-[#2c2c2c]">PRODUCTIVITY TOOLS</span>
-        </h1>
-      </header>
+    <main className="min-h-screen bg-[#e8e6e1]">
+      {/* Container with max width and padding */}
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
+        {/* Header */}
+        <header className="pt-12 md:pt-16 pb-8 md:pb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight">
+            <span className="text-[#d97642]">AI</span>{" "}
+            <span className="text-[#2c2c2c]">PRODUCTIVITY TOOLS</span>
+          </h1>
+        </header>
 
-      {/* Main Grid */}
-      <div className="px-4 md:px-8 pb-12 md:pb-16">
-        <div className="max-w-[1600px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        {/* Main Grid */}
+        <div className="pb-12 md:pb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {aiToolsData.map((category) => (
             <div key={category.id} className="space-y-3 md:space-y-4">
               {/* Category Title */}
-              <h2 className={`text-xs md:text-sm font-bold ${category.color} tracking-wide uppercase`}>
+              <h2 className={`text-[11px] md:text-xs font-bold ${category.color} tracking-wide uppercase leading-tight mb-1`}>
                 {category.name}
               </h2>
 
@@ -40,12 +42,12 @@ export default function Home() {
                     {/* Logo */}
                     <Link
                       href={`/tool/${tool.id}`}
-                      className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-full overflow-hidden border border-gray-300 hover:border-gray-400 transition-all hover:scale-110"
+                      className="flex-shrink-0 w-[18px] h-[18px] md:w-[20px] md:h-[20px] rounded-full overflow-hidden bg-white border border-gray-200 hover:border-gray-400 transition-all hover:scale-110 flex items-center justify-center"
                     >
                       <img
-                        src={tool.logo}
+                        src={`https://www.google.com/s2/favicons?domain=${new URL(tool.url).hostname}&sz=128`}
                         alt={tool.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain p-[2px]"
                       />
                     </Link>
 
@@ -64,13 +66,26 @@ export default function Home() {
               </div>
             </div>
           ))}
+          </div>
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer className="py-6 md:py-8 text-center text-xs md:text-sm text-gray-600">
-        <p>AI Productivity Tools © 2025</p>
-      </footer>
+        {/* Footer */}
+        <footer className="py-8 md:py-10 text-center text-xs md:text-sm text-gray-600 space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <span>Powered by</span>
+            <a 
+              href="https://promptpack.net" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="font-semibold text-[#d97642] hover:text-[#c26635] transition-colors inline-flex items-center gap-1 group"
+            >
+              PromptPack.net
+              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+            </a>
+          </div>
+          <p>AI Productivity Tools © 2025</p>
+        </footer>
+      </div>
     </main>
   );
 }

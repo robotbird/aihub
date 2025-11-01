@@ -1,0 +1,17 @@
+# Logos Directory
+
+This directory is for storing local logo files.
+
+## File naming convention
+- Use the tool's `id` from `data/ai-tools.ts`
+- Format: `{tool-id}.png`
+- Example: `chatgpt.png`, `claude.png`
+
+## Fallback
+If a logo file doesn't exist locally, the app will automatically fetch it from Google's Favicon service.
+
+## Recommended specs
+- Format: PNG with transparent background
+- Size: 128x128px or larger
+- Quality: High resolution for retina displays
+

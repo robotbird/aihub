@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>PopAi: Your Personal AI Workspace</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="icon" type="image/svg+xml" href="https://www.popai.pro/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://www.popai.pro/fonts/iconfont.css?v=1.10.3116" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:site_name" content="popai.pro" />
+  <meta property="og:title" content="PopAi: Your Personal AI Workspace" />
+  <meta property="og:description"
+    content="PopAi: is a powerful AI tool that allows you to chat with any document or pdf（GPT-4 & GPT-4o） in one click, create ai powerpoint and slides with kinds of free templates and generate any AI images fast." />
+  <meta property="og:image" content="https://popaife.s3.ap-southeast-1.amazonaws.com/logo/share-logo.png" />
+  <meta property="og:image:width" content="100" />
+  <meta property="og:image:height" content="100" />
+  <meta property="og:url" content="https://www.popai.pro" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PopAi: Your Personal AI Workspace" />
+  <meta name="twitter:description"
+    content="PopAi: is a powerful AI tool that allows you to chat with any document or pdf（GPT-4 & GPT-4o） in one click, create ai powerpoint and slides with kinds of free templates and generate any AI images fast." />
+  <meta name="twitter:image" content="https://popaife.s3.ap-southeast-1.amazonaws.com/logo/share-logo.png" />
+  <meta name="google" content="notranslate" />
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://www.popai.pro/",
+        "logo": "https://popaife.s3.ap-southeast-1.amazonaws.com/other/logo_siderbar.svg",
+        "name": "PopAi",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "customerservice@popai.pro",
+            "contactType": "Technical support"
+          }
+        ],
+        "description": "Your Personal AI Workspace",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 MARINA BOULEVARD #28-00 ONE MARINA BOULEVARD SINGAPORE (018989)",
+          "addressLocality": "SINGAPORE",
+          "addressCountry": "SG",
+          "postalCode": "018989"
+        },
+        "sameAs": [
+          "https://facebook.com/profile.php?id=61550202160034",
+          "https://x.com/popaiinone",
+          "https://discord.gg/y7myM35S",
+          "https://www.youtube.com/@PopAi-allinone/videos",
+          "https://www.tiktok.com/@popai_official"
+        ]
+      }
+    </script>
+  <script type="text/javascript">
+    window.APP_VERSION = '1.10.3116';
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://static-cdn.trackier.com/rtg/6893de60af720455e1684156.js"></script>
+  <script type="module" crossorigin src="https://static.popai.pro/assets/main-681b298f.js"></script>
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/__commonjsHelpers__-0036ce92.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/md-vendor-e11a122a.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/tools-vendor-0148733e.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/r-vendor-f41de5f4.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/ui-vendor-1d32197d.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/custom-svgs-79dd02b2.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/text-all-b911bb13.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/tpy-vendor-62f8e87d.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/codemirror-vendor-1b0e8cba.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/p-vendor-470eb244.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/univer-vendor-fc6c61c8.js">
+  <link rel="modulepreload" crossorigin href="https://static.popai.pro/assets/excel-85d3a268.js">
+  <link rel="stylesheet" href="https://static.popai.pro/assets/excel-47bfeb4d.css">
+  <link rel="stylesheet" href="https://static.popai.pro/assets/custom-svgs-2b8fe25d.css">
+  <link rel="stylesheet" href="https://static.popai.pro/assets/index-7bd9b997.css">
+</head>
+
+<body class="ignore">
+  <div id="root">
+    <div id="pre_content" style="
+          position: fixed;
+          margin: 0;
+          padding: 20px;
+          z-index: 99999;
+          width: 90%;
+          height: 60%;
+          left: 5%;
+          color: #fff;
+          background-color: #fff;
+          pointer-events: none;
+        ">
+      PopAi revolutionizes document interaction, offering seamless navigation, enhanced
+      readability, and universal accessibility. Navigate effortlessly through intricate documents,
+      magnify details, and tailor the layout for supreme clarity with PopAi. PopAi masterfully
+      generates images on command, provides access to image prompts and generation codes, and
+      offers image-based homework help, enriching educational support with visual aids.
+      Effortlessly turn ideas into PowerPoint slides. Just input your topic and PopAi crafts
+      customizable outlines with smart layouts and automatic illustrations. Edit online and export
+      as PPTX or share via link upon completion. .PopAi revolutionizes document interaction,
+      offering seamless navigation, enhanced readability, and universal accessibility. Navigate
+      effortlessly through intricate documents, magnify details, and tailor the layout for supreme
+      clarity with PopAi. PopAi masterfully generates images on command, provides access to image
+      prompts and generation codes, and offers image-based homework help, enriching educational
+      support with visual aids. Effortlessly turn ideas into PowerPoint slides. Just input your
+      topic and PopAi crafts customizable outlines with smart layouts and automatic illustrations.
+      Edit online and export as PPTX or share via link upon completion.
+    </div>
+    <script type="text/javascript">
+      !(function () {
+        const links = [
+          'https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Source+Code+Pro:wght@500&family=Noto+Sans+SC:wght@400;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SF+Pro:wght@400;500;600;700;800&display=swap',
+          'https://fonts.googleapis.com/css2?family=Agbalumo&family=Belanosima:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&family=Leckerli+One&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Rubik+Dirt&family=Slabo+13px&family=Titan+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yeseva+One&display=swap',
+          // Aoboshi One、 Zen Dots、 Sigmar Lora、  Playfair Display Volkhov Abril Fatface
+          'https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aoboshi+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sigmar&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Dots&display=swap',
+          // Aboreto、 Alfa Slab One、Bungee、Slackey、Fredoka、'Kalam', 'Caveat', 'Nunito', 'Orbitron', 'Exo 2'
+          'https://fonts.googleapis.com/css2?family=Aboreto&family=Alfa+Slab+One&family=Bungee&family=Caveat:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Fredoka:wght@300..700&family=Kalam:wght@300;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Slackey&display=swap',
+        ];
+        links.forEach((href) => {
+          const link = document.createElement('link');
+          link.setAttribute('crossorigin', 'anonymous');
+          link.setAttribute('rel', 'stylesheet');
+          link.setAttribute('href', href);
+          document.head.appendChild(link);
+        });
+      })(window, document);
+    </script>
+    
+    <script
+      data-app="eyJhcHBfa2V5IjoiNTcyNSIsImFwcF92aWV3IjoicHJvbW90ZSIsImJyb3dzZXJfdXJsIjoiaHR0cHM6Ly9zb2ZpcmUuYmFpZHUuY29tL2RhdGEvdWEvYWIuanNvbiIsImZvcm1fZGVzYyI6IiIsInNlbmRfaW50ZXJ2YWwiOjUwLCJzZW5kX21ldGhvZCI6M30="
+      src="https://www.popai.pro/dfxaf3-sg.js"></script>
+    <script
+      src="https://www.google.com/recaptcha/enterprise.js?render=6LfP64kpAAAAAP_Jl8kdL0-09UKzowM87iddJqXA"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+    <script src="https://www.popai.pro/fonts/iconfont.js?v=1.10.3116"></script>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "27169e6af41c4d1fa234ad9907a0dd69"}'></script><!-- Cloudflare Pages Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"448341ce05074bde95bf55d11d2cfed1","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
