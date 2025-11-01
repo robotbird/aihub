@@ -22,8 +22,6 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  
   return {
     title: `${tool.name} - AI Productivity Tools`,
     description: tool.description,
@@ -31,7 +29,6 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
     openGraph: {
       title: `${tool.name} - AI Productivity Tools`,
       description: tool.description,
-      url: `${baseUrl}/tool/${tool.id}`,
       siteName: "AI Productivity Tools",
       type: "website",
     },
@@ -39,9 +36,6 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
       card: "summary_large_image",
       title: `${tool.name} - AI Productivity Tools`,
       description: tool.description,
-    },
-    alternates: {
-      canonical: `${baseUrl}/tool/${tool.id}`,
     },
   };
 }

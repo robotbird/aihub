@@ -14,10 +14,6 @@ export const metadata: Metadata = {
   authors: [{ name: "AI Productivity Tools" }],
   creator: "AI Productivity Tools",
   publisher: "AI Productivity Tools",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
